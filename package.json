@@ -1,8 +1,8 @@
 {
-  "name": "com.kunagisatomo.luaapi",
-  "version": "1.0.0",
-  "displayName": "LuaAPI",
-  "description": "Simple Lua API.",
+  "name": "com.kunagisatomo.litelua",
+  "version": "2.0.0",
+  "displayName": "LiteLua",
+  "description": "Lightweight Lua binding for Unity",
   "keywords": [
     "lua"
   ],
