@@ -53,23 +53,23 @@ namespace LiteLua
 
     public enum LuaOp : int
     {
-        Add = 0,    // LUA_OPADD
-        Sub = 1,    // LUA_OPSUB
-        Mul = 2,    // LUA_OPMUL
-        Div = 3,    // LUA_OPDIV
-        Mod = 4,    // LUA_OPMOD
-        Pow = 5,    // LUA_OPPOW
-        Unm = 6,    // LUA_OPUNM
+        Add     = 0,    // LUA_OPADD
+        Sub     = 1,    // LUA_OPSUB
+        Mul     = 2,    // LUA_OPMUL
+        Mod     = 3,    // LUA_OPMOD
+        Div     = 4,    // LUA_OPDIV
+        Idiv    = 5,    // LUA_OPIDIV
+        Pow     = 6,    // LUA_OPPOW
 
-        Idiv = 7,   // LUA_OPIDIV
+        Band    = 7,    // LUA_OPBAND
+        Bor     = 8,    // LUA_OPBOR
+        Bxor    = 9,    // LUA_OPBXOR
 
-        Band = 8,   // LUA_OPBAND
-        Bor = 9,    // LUA_OPBOR
-        Bxor = 10,  // LUA_OPBXOR
-        Bnot = 11,  // LUA_OPBNOT
+        Shl     = 10,   // LUA_OPSHL
+        Shr     = 11,   // LUA_OPSHR
 
-        Shl = 12,   // LUA_OPSHL
-        Shr = 13    // LUA_OPSHR
+        Unm     = 12,   // LUA_OPUNM
+        Bnot    = 13,   // LUA_OPBNOT
     }
 
     public enum LuaCompareOp
