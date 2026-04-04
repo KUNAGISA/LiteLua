@@ -858,26 +858,12 @@ namespace LiteLua
             return Marshal.PtrToStringUTF8(ptr);
         }
 
-        [DllImport(LuaDLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "lua_getupvalue")]
-        private static extern IntPtr lua_getupvalue_raw(IntPtr L, ref LuaDebug debug, int n);
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static string lua_getupvalue(IntPtr L, ref LuaDebug debug, int n)
-        {
-            var ptr = lua_getupvalue_raw(L, ref debug, n);
-            return Marshal.PtrToStringUTF8(ptr);
-        }
-
-        [DllImport(LuaDLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "lua_setupvalue")]
-        public static extern IntPtr lua_setupvalue_raw(IntPtr L, ref LuaDebug debug, int n);
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static string lua_setupvalue(IntPtr L, ref LuaDebug debug, int n)
-        {
-            var ptr = lua_setupvalue_raw(L, ref debug, n);
-            return Marshal.PtrToStringUTF8(ptr);
-        }
-
+        [DllImport(LuaDLL, CallingConvention = CallingConvention.Cdecl)]
+        public static extern IntPtr lua_getupvalue(IntPtr L, int funcindex, int n);
+        
+        [DllImport(LuaDLL, CallingConvention = CallingConvention.Cdecl)]
+        public static extern IntPtr lua_setupvalue(IntPtr L, int funcindex, int n);
+        
         [DllImport(LuaDLL, CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr lua_upvalueid(IntPtr L, int fidx, int n);
 
